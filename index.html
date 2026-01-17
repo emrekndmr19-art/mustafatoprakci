@@ -13,16 +13,9 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#71717A", // Zinc-700 for a sophisticated metallic gray base
-                        silver: {
-                            100: "#f5f5f5",
-                            200: "#e5e5e5",
-                            300: "#d4d4d4",
-                            400: "#a3a3a3",
-                            500: "#737373",
-                            600: "#525252",
-                        },
-                        "background-light": "#FFFFFF",
+                        primary: "#f97316",
+                        secondary: "#1d4ed8",
+                        "background-light": "#f8f5f2",
                         "background-dark": "#0A0A0A",
                     },
                     fontFamily: {
@@ -38,7 +31,7 @@
     </script>
 <style>
         .metallic-text {
-            background: linear-gradient(135deg, #71717A 0%, #D4D4D8 50%, #71717A 100%);
+            background: linear-gradient(135deg, #f97316 0%, #fb923c 50%, #1d4ed8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -55,7 +48,7 @@
     </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300">
-<header class="fixed w-full z-50 glass-nav border-b border-slate-200 dark:border-slate-800">
+<header class="fixed w-full z-50 bg-white/95 dark:bg-black/80 border-b border-slate-200 dark:border-slate-800 backdrop-blur">
 <div class="container mx-auto px-6 py-4 flex justify-between items-center">
 <div class="flex items-center space-x-2">
 <div class="text-2xl font-display font-extrabold tracking-tighter metallic-text">EMF NAKLİYAT</div>
@@ -63,94 +56,147 @@
 <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
 <a class="hover:text-primary transition-colors" href="#home">Ana Sayfa</a>
 <a class="hover:text-primary transition-colors" href="#services">Hizmetlerimiz</a>
-<a class="hover:text-primary transition-colors" href="#faq">S.S.S</a>
+<a class="hover:text-primary transition-colors" href="#process">Süreç</a>
 <a class="hover:text-primary transition-colors" href="#contact">İletişim</a>
-<a class="bg-primary text-white px-5 py-2.5 rounded-full hover:opacity-90 transition-all shadow-lg shadow-zinc-500/20" href="#quote">Teklif Al</a>
+<a class="flex items-center space-x-2 text-slate-700 hover:text-primary transition-colors" href="tel:+905302871850">
+<span class="material-symbols-outlined text-primary">call</span>
+<span>+90 530 287 18 50</span>
+</a>
+<a class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-orange-500 transition-all shadow-lg shadow-orange-500/30" href="#quote">Fiyat Teklifi Al</a>
 <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" onclick="document.documentElement.classList.toggle('dark')">
 <span class="material-symbols-outlined align-middle">contrast</span>
 </button>
 </nav>
-<button class="md:hidden text-slate-900 dark:text-white">
+<button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden text-slate-900 dark:text-white p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" id="mobile-menu-button">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
-</header>
-<section class="relative min-h-screen flex items-center pt-20 overflow-hidden" id="home">
-<div class="absolute inset-0 z-0">
-<img alt="Logistics Truck" class="w-full h-full object-cover opacity-20 dark:opacity-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWjhG44iY4quqrUFU2ZDDidqWgNNXvds-zKNvcINikRQ2W6RzHf-XEDeHvozs7NDA_PXEojuShvGaOtKMq_6wf6u2w-fIDHY5hsKrrQz5jZutfEpMjHnz3fZlnkpmVIp4BEkVeW0ji3ZeusMoEuOwyYrrJNJeDq5obfREnwmw4E_5UbrhF9KbndWi56g37_Es9EF2_7jDgHEsZweKHXGhzPJuWgzeG1iFUHKS0ZkQxboMz3dVv6LTv5fBstSBpp9K_bTvmOToLwQF5"/>
-<div class="absolute inset-0 bg-gradient-to-r from-background-light via-background-light/80 to-transparent dark:from-background-dark dark:via-background-dark/80"></div>
-</div>
-<div class="container mx-auto px-6 relative z-10">
-<div class="max-w-3xl">
-<div class="inline-flex items-center space-x-2 bg-slate-100 dark:bg-slate-800 px-4 py-2 rounded-full mb-6 border border-slate-200 dark:border-slate-700">
-<span class="relative flex h-3 w-3">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-zinc-400 opacity-75"></span>
-<span class="relative inline-flex rounded-full h-3 w-3 bg-zinc-500"></span>
-</span>
-<span class="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">7/24 Kesintisiz Hizmet</span>
-</div>
-<h1 class="text-6xl md:text-8xl font-display font-extrabold mb-6 leading-tight">
-<span class="metallic-text">EMF</span><br/>
-<span class="text-slate-900 dark:text-white">NAKLİYAT</span>
-</h1>
-<p class="text-xl md:text-2xl text-slate-600 dark:text-slate-400 mb-10 max-w-xl">
-                    7/24 Şehir içi ve şehirler arası hızlı ve güvenilir taşımacılık. Eşyalarınız bizimle emin ellerde.
-                </p>
-<div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-<a class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-center hover:scale-105 transition-transform shadow-xl shadow-zinc-500/30" href="#quote">Ücretsiz Ekspertiz</a>
-<a class="flex items-center justify-center space-x-2 border-2 border-slate-200 dark:border-slate-700 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="tel:+905516552850">
+<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-black/95 backdrop-blur" id="mobile-menu">
+<nav class="container mx-auto px-6 py-6 flex flex-col space-y-4 text-base font-semibold">
+<a class="hover:text-primary transition-colors" href="#home">Ana Sayfa</a>
+<a class="hover:text-primary transition-colors" href="#services">Hizmetlerimiz</a>
+<a class="hover:text-primary transition-colors" href="#process">Süreç</a>
+<a class="hover:text-primary transition-colors" href="#contact">İletişim</a>
+<a class="bg-primary text-white px-5 py-3 rounded-full hover:opacity-90 transition-all text-center shadow-lg shadow-zinc-500/20" href="#quote">Teklif Al</a>
+<a class="flex items-center justify-center space-x-2 border border-slate-200 dark:border-slate-700 px-5 py-3 rounded-full font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="tel:+905302871850">
 <span class="material-symbols-outlined">call</span>
-<span>0551 655 28 50</span>
+<span>+90 530 287 18 50</span>
 </a>
+<button class="flex items-center justify-center space-x-2 border border-slate-200 dark:border-slate-700 px-5 py-3 rounded-full font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined">contrast</span>
+<span>Tema Değiştir</span>
+</button>
+</nav>
+</div>
+</header>
+<section class="relative pt-28 pb-16 overflow-hidden" id="home">
+<div class="container mx-auto px-6">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div>
+<span class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.3em] text-primary">Profesyonel Taşımacılık</span>
+<h1 class="text-5xl md:text-6xl font-display font-extrabold text-secondary mt-6 leading-tight">
+Doğru Zamanda<br/>Doğru Yerde
+</h1>
+<p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 mt-6 max-w-xl">
+İstanbul içi ağırlıklı çalışıyoruz; tüm illere sevkiyat sağlıyoruz. Güvenilir ve hızlı taşımacılık için bize ulaşın.
+</p>
+<div class="mt-8 flex flex-col sm:flex-row gap-4">
+<a class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-center hover:bg-orange-500 transition-colors shadow-xl shadow-orange-500/30" href="#quote">Fiyat Teklifi Al</a>
+<a class="flex items-center justify-center gap-2 border-2 border-slate-200 dark:border-slate-700 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="tel:+905302871850">
+<span class="material-symbols-outlined text-primary">call</span>
+<span>0530 287 18 50</span>
+</a>
+</div>
+<form class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-2xl shadow-xl">
+<input class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" placeholder="Hizmet Türü" type="text"/>
+<input class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" placeholder="Adınız ve Soyadınız" type="text"/>
+<input class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" placeholder="Telefon Numaranız" type="tel"/>
+<button class="bg-primary text-white px-6 py-3 rounded-xl font-semibold hover:bg-orange-500 transition-colors" type="submit">Aranma Talep Et</button>
+</form>
+</div>
+<div class="relative">
+<div class="absolute -top-10 -left-6 w-32 h-32 rounded-full border-[10px] border-slate-200/60"></div>
+<img alt="Modern Truck" class="w-full max-w-lg mx-auto drop-shadow-2xl" src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80"/>
+</div>
+</div>
+<div class="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl py-6 shadow-lg">
+<div class="text-4xl font-bold text-secondary" data-count="7">0</div>
+<p class="mt-2 text-sm uppercase tracking-widest text-primary">Bölgede</p>
+</div>
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl py-6 shadow-lg">
+<div class="text-4xl font-bold text-secondary" data-count="81">0</div>
+<p class="mt-2 text-sm uppercase tracking-widest text-primary">İlde</p>
+</div>
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl py-6 shadow-lg">
+<div class="text-4xl font-bold text-secondary" data-count="3033">0</div>
+<p class="mt-2 text-sm uppercase tracking-widest text-primary">Başarılı Proje</p>
 </div>
 </div>
 </div>
 </section>
-<section class="py-24 bg-slate-50 dark:bg-[#0c0c0c]" id="services">
+<section class="py-24 bg-[#f4f1ed] dark:bg-[#0c0c0c]" id="services">
 <div class="container mx-auto px-6">
-<div class="text-center mb-20">
-<h2 class="text-sm font-bold text-primary tracking-[0.2em] uppercase mb-4">Uzmanlık Alanlarımız</h2>
-<h3 class="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white">Profesyonel Taşıma Çözümleri</h3>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-<div class="w-16 h-16 bg-slate-100 dark:bg-slate-800 rounded-2xl flex items-center justify-center mb-6 text-primary">
-<span class="material-symbols-outlined text-4xl">home_work</span>
-</div>
-<h4 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Evden Eve Nakliyat</h4>
-<p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-                        Evinizi yeni bir yere taşırken stresi ortadan kaldırıyoruz. Eşyalarınızı özenle paketliyor ve güvenle taşıyoruz.
-                    </p>
-<ul class="space-y-2 text-sm text-slate-500 dark:text-slate-500">
-<li class="flex items-center space-x-2"><span class="material-symbols-outlined text-sm">check_circle</span> <span>Asansörlü Taşıma</span></li>
-<li class="flex items-center space-x-2"><span class="material-symbols-outlined text-sm">check_circle</span> <span>Sigortalı Nakliyat</span></li>
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Profesyonel ve premium hizmet</span>
+<h2 class="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mt-4">Ne tür hizmetler sağlıyoruz</h2>
+<p class="text-slate-600 dark:text-slate-400 mt-6">
+Özellikle İstanbul içi başta olmak üzere tüm Türkiye’de 81 il ve ilçelerde profesyonel ve uzman kadromuz ile hizmet veriyoruz.
+</p>
+<div class="grid sm:grid-cols-2 gap-8 mt-8">
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white mb-4">Hizmetlerimiz:</h3>
+<ul class="space-y-3 text-slate-600 dark:text-slate-400">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Nakliye</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Lojistik</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Dağıtım</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Parsiyel Taşımacılık</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> İsteğe Bağlı Depolama</li>
 </ul>
 </div>
-<div class="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-<div class="w-16 h-16 bg-slate-100 dark:bg-slate-800 rounded-2xl flex items-center justify-center mb-6 text-primary">
-<span class="material-symbols-outlined text-4xl">local_shipping</span>
-</div>
-<h4 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Şehirler Arası Nakliyat</h4>
-<p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-                        Türkiye'nin her noktasına hızlı ve güvenli sevkiyat. 7/24 takip sistemi ile eşyalarınızın nerede olduğunu bilin.
-                    </p>
-<ul class="space-y-2 text-sm text-slate-500 dark:text-slate-500">
-<li class="flex items-center space-x-2"><span class="material-symbols-outlined text-sm">check_circle</span> <span>Türkiye Geneli Servis</span></li>
-<li class="flex items-center space-x-2"><span class="material-symbols-outlined text-sm">check_circle</span> <span>Zamanında Teslimat</span></li>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white mb-4">Araç filomuz:</h3>
+<ul class="space-y-3 text-slate-600 dark:text-slate-400">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Kamyonet</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Kamyon</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Tır</li>
 </ul>
 </div>
-<div class="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-<div class="w-16 h-16 bg-slate-100 dark:bg-slate-800 rounded-2xl flex items-center justify-center mb-6 text-primary">
-<span class="material-symbols-outlined text-4xl">inventory_2</span>
 </div>
-<h4 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Eşya Depolama</h4>
-<p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-                        Güvenli, temiz ve 7/24 izlenen depolarımızda eşyalarınızı dilediğiniz süre boyunca saklıyoruz.
-                    </p>
-<ul class="space-y-2 text-sm text-slate-500 dark:text-slate-500">
-<li class="flex items-center space-x-2"><span class="material-symbols-outlined text-sm">check_circle</span> <span>7/24 Kamera Takibi</span></li>
-<li class="flex items-center space-x-2"><span class="material-symbols-outlined text-sm">check_circle</span> <span>Steril Ortam</span></li>
-</ul>
+<a class="inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-lg font-semibold mt-10 hover:bg-orange-500 transition-colors" href="#quote">Detaylı Bilgi Al</a>
+</div>
+<div class="relative">
+<div class="absolute -top-6 -right-6 bg-primary w-32 h-32"></div>
+<img alt="Team" class="relative z-10 rounded-2xl shadow-2xl" src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1000&q=80"/>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-background-dark" id="process">
+<div class="container mx-auto px-6 text-center">
+<p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Çalışan Verimliliği</p>
+<h2 class="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mt-4">Bu Şekilde Çalışıyoruz</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+<div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 text-left">
+<span class="text-3xl font-bold text-primary">01.</span>
+<h3 class="mt-4 font-bold text-slate-900 dark:text-white">Fiyat Teklifi</h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Arayarak fiyat teklifinizi netleştiriyoruz.</p>
+</div>
+<div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 text-left">
+<span class="text-3xl font-bold text-primary">02.</span>
+<h3 class="mt-4 font-bold text-slate-900 dark:text-white">Sözleşme</h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Karşılıklı mutabakat ile süreci planlıyoruz.</p>
+</div>
+<div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 text-left">
+<span class="text-3xl font-bold text-primary">03.</span>
+<h3 class="mt-4 font-bold text-slate-900 dark:text-white">Başlama</h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Profesyonel kadromuz ile operasyonu başlatıyoruz.</p>
+</div>
+<div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 text-left">
+<span class="text-3xl font-bold text-primary">04.</span>
+<h3 class="mt-4 font-bold text-slate-900 dark:text-white">Mutlu Son</h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Doğru zamanda, doğru yerde teslimat sağlıyoruz.</p>
 </div>
 </div>
 </div>
@@ -162,7 +208,7 @@
 <h2 class="text-sm font-bold text-primary tracking-[0.2em] uppercase mb-4">Hızlı Teklif</h2>
 <h3 class="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-8 leading-tight">Taşınma Planınızı Birlikte Yapalım</h3>
 <p class="text-lg text-slate-600 dark:text-slate-400 mb-10">
-                        Formu doldurarak yaklaşık bir maliyet alabilir veya uzman ekspertiz talebinde bulunabilirsiniz. Ekibimiz en kısa sürede sizinle iletişime geçecektir.
+                        Formu doldurarak fiyat teklifi alabilirsiniz. Ekibimiz en kısa sürede sizinle iletişime geçecektir.
                     </p>
 <div class="space-y-6">
 <div class="flex items-start space-x-4">
@@ -171,7 +217,16 @@
 </div>
 <div>
 <h5 class="font-bold dark:text-white">Hizmet Bölgesi</h5>
-<p class="text-slate-500">İstanbul / Ataşehir merkezli, tüm Türkiye.</p>
+<p class="text-slate-500">İstanbul merkezli, Türkiye geneli sevkiyat.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="bg-zinc-100 dark:bg-zinc-800 p-3 rounded-lg text-primary">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<div>
+<h5 class="font-bold dark:text-white">Araç Filosu</h5>
+<p class="text-slate-500">Kamyonet, kamyon ve tır seçenekleri.</p>
 </div>
 </div>
 </div>
@@ -201,15 +256,16 @@
 <div class="mb-6">
 <label class="block text-sm font-semibold mb-2 text-slate-700 dark:text-slate-300">Hizmet Türü</label>
 <select class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white">
-<option>Evden Eve Nakliyat</option>
-<option>Ofis Taşımacılığı</option>
-<option>Şehirler Arası Nakliyat</option>
-<option>Parça Eşya Taşıma</option>
+<option>Nakliye</option>
+<option>Lojistik</option>
+<option>Dağıtım</option>
+<option>Parsiyel Taşımacılık</option>
+<option>İsteğe Bağlı Depolama</option>
 </select>
 </div>
 <div class="mb-8">
 <label class="block text-sm font-semibold mb-2 text-slate-700 dark:text-slate-300">Notlarınız</label>
-<textarea class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" placeholder="Örn: 2+1 ev eşyası, asansörlü taşıma istiyoruz..." rows="4"></textarea>
+<textarea class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" placeholder="Örn: Parsiyel yük, teslim günü ve özel talepler..." rows="4"></textarea>
 </div>
 <button class="w-full bg-primary text-white font-bold py-4 rounded-xl hover:bg-zinc-800 transition-colors shadow-lg" type="submit">TEKLİF İSTE</button>
 </form>
@@ -297,11 +353,11 @@
 <h5 class="text-lg font-bold mb-6">Yetkililer</h5>
 <ul class="space-y-4 text-zinc-400 text-sm">
 <li class="flex flex-col">
-<span class="font-bold text-white">Erdem Toprakçı</span>
+<span class="font-bold text-white">Erdem Toprakcı</span>
 <a class="hover:text-white" href="tel:+905516552850">0551 655 28 50</a>
 </li>
 <li class="flex flex-col">
-<span class="font-bold text-white">Mustafa Toprakçı</span>
+<span class="font-bold text-white">Mustafa Toprakcı</span>
 <a class="hover:text-white" href="tel:+905302871850">0530 287 18 50</a>
 </li>
 </ul>
@@ -309,11 +365,11 @@
 <div>
 <h5 class="text-lg font-bold mb-6">Hizmetlerimiz</h5>
 <ul class="space-y-2 text-zinc-400 text-sm">
-<li><a class="hover:text-white transition-colors" href="#">Evden Eve Nakliyat</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Şehirler Arası Taşıma</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Ofis &amp; Büro Taşımacılığı</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Eşya Paketleme</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Asansörlü Nakliyat</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Nakliye</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Lojistik</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Dağıtım</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Parsiyel Taşımacılık</a></li>
+<li><a class="hover:text-white transition-colors" href="#">İsteğe Bağlı Depolama</a></li>
 </ul>
 </div>
 </div>
@@ -326,10 +382,62 @@
 </div>
 </div>
 </footer>
-<a class="fixed bottom-8 right-8 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform z-50" href="https://wa.me/905516552850">
+<a class="fixed bottom-8 right-8 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform z-50" href="https://wa.me/905302871850">
 <svg fill="currentColor" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835c1.406.836 3.013 1.278 4.651 1.279 5.093 0 9.238-4.144 9.241-9.237.001-2.467-.959-4.786-2.706-6.533-1.748-1.747-4.067-2.707-6.535-2.708-5.093 0-9.239 4.144-9.241 9.237-.001 1.706.469 3.371 1.359 4.803l-.886 3.24 3.317-.871zm11.332-6.532c-.31-.156-1.834-.905-2.112-1.006-.279-.101-.482-.151-.684.151-.202.302-.782 1.006-.959 1.208-.176.202-.353.226-.663.071-.31-.156-1.31-.483-2.495-1.541-.922-.822-1.544-1.838-1.724-2.141-.181-.302-.019-.465.136-.62.14-.139.31-.362.466-.543.155-.181.206-.31.31-.517.103-.207.051-.388-.026-.543-.077-.155-.684-1.648-.938-2.259-.247-.597-.497-.517-.684-.527l-.583-.009c-.202 0-.531.076-.81.38-.278.303-1.063 1.04-1.063 2.538 0 1.498 1.088 2.943 1.24 3.145.151.202 2.14 3.268 5.184 4.582.724.313 1.29.5 1.731.641.727.231 1.388.199 1.911.121.583-.087 1.834-.75 2.091-1.474.257-.724.257-1.344.18-1.474-.077-.13-.284-.207-.593-.364z"></path>
 </svg>
 </a>
+
+<script>
+        const animateCounters = () => {
+            const counters = document.querySelectorAll("[data-count]");
+            const observer = new IntersectionObserver(
+                (entries, obs) => {
+                    entries.forEach((entry) => {
+                        if (!entry.isIntersecting) return;
+                        const el = entry.target;
+                        const target = Number(el.dataset.count);
+                        const duration = 1500;
+                        const startTime = performance.now();
+                        const step = (now) => {
+                            const progress = Math.min((now - startTime) / duration, 1);
+                            const value = Math.floor(progress * target);
+                            el.textContent = value.toLocaleString("tr-TR");
+                            if (progress < 1) {
+                                requestAnimationFrame(step);
+                            } else {
+                                el.textContent = target.toLocaleString("tr-TR");
+                            }
+                        };
+                        requestAnimationFrame(step);
+                        obs.unobserve(el);
+                    });
+                },
+                { threshold: 0.6 }
+            );
+            counters.forEach((counter) => observer.observe(counter));
+        };
+
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        if (mobileMenuButton && mobileMenu) {
+            const toggleMenu = () => {
+                const isOpen = !mobileMenu.classList.contains("hidden");
+                mobileMenu.classList.toggle("hidden");
+                mobileMenuButton.setAttribute("aria-expanded", String(!isOpen));
+            };
+            mobileMenuButton.addEventListener("click", toggleMenu);
+            mobileMenu.querySelectorAll("a, button").forEach((item) => {
+                item.addEventListener("click", () => {
+                    if (!mobileMenu.classList.contains("hidden")) {
+                        mobileMenu.classList.add("hidden");
+                        mobileMenuButton.setAttribute("aria-expanded", "false");
+                    }
+                });
+            });
+        }
+
+        animateCounters();
+    </script>
 
 </body></html>
