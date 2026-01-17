@@ -70,9 +70,26 @@
 <span class="material-symbols-outlined align-middle">contrast</span>
 </button>
 </nav>
-<button class="md:hidden text-slate-900 dark:text-white">
+<button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden text-slate-900 dark:text-white p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" id="mobile-menu-button">
 <span class="material-symbols-outlined">menu</span>
 </button>
+</div>
+<div class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-black/95 backdrop-blur" id="mobile-menu">
+<nav class="container mx-auto px-6 py-6 flex flex-col space-y-4 text-base font-semibold">
+<a class="hover:text-primary transition-colors" href="#home">Ana Sayfa</a>
+<a class="hover:text-primary transition-colors" href="#services">Hizmetlerimiz</a>
+<a class="hover:text-primary transition-colors" href="#faq">S.S.S</a>
+<a class="hover:text-primary transition-colors" href="#contact">İletişim</a>
+<a class="bg-primary text-white px-5 py-3 rounded-full hover:opacity-90 transition-all text-center shadow-lg shadow-zinc-500/20" href="#quote">Teklif Al</a>
+<a class="flex items-center justify-center space-x-2 border border-slate-200 dark:border-slate-700 px-5 py-3 rounded-full font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="tel:+905516552850">
+<span class="material-symbols-outlined">call</span>
+<span>Hemen Ara</span>
+</a>
+<button class="flex items-center justify-center space-x-2 border border-slate-200 dark:border-slate-700 px-5 py-3 rounded-full font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined">contrast</span>
+<span>Tema Değiştir</span>
+</button>
+</nav>
 </div>
 </header>
 <section class="relative min-h-screen flex items-center pt-20 overflow-hidden" id="home">
@@ -331,5 +348,26 @@
 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835c1.406.836 3.013 1.278 4.651 1.279 5.093 0 9.238-4.144 9.241-9.237.001-2.467-.959-4.786-2.706-6.533-1.748-1.747-4.067-2.707-6.535-2.708-5.093 0-9.239 4.144-9.241 9.237-.001 1.706.469 3.371 1.359 4.803l-.886 3.24 3.317-.871zm11.332-6.532c-.31-.156-1.834-.905-2.112-1.006-.279-.101-.482-.151-.684.151-.202.302-.782 1.006-.959 1.208-.176.202-.353.226-.663.071-.31-.156-1.31-.483-2.495-1.541-.922-.822-1.544-1.838-1.724-2.141-.181-.302-.019-.465.136-.62.14-.139.31-.362.466-.543.155-.181.206-.31.31-.517.103-.207.051-.388-.026-.543-.077-.155-.684-1.648-.938-2.259-.247-.597-.497-.517-.684-.527l-.583-.009c-.202 0-.531.076-.81.38-.278.303-1.063 1.04-1.063 2.538 0 1.498 1.088 2.943 1.24 3.145.151.202 2.14 3.268 5.184 4.582.724.313 1.29.5 1.731.641.727.231 1.388.199 1.911.121.583-.087 1.834-.75 2.091-1.474.257-.724.257-1.344.18-1.474-.077-.13-.284-.207-.593-.364z"></path>
 </svg>
 </a>
+
+<script>
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        if (mobileMenuButton && mobileMenu) {
+            const toggleMenu = () => {
+                const isOpen = !mobileMenu.classList.contains("hidden");
+                mobileMenu.classList.toggle("hidden");
+                mobileMenuButton.setAttribute("aria-expanded", String(!isOpen));
+            };
+            mobileMenuButton.addEventListener("click", toggleMenu);
+            mobileMenu.querySelectorAll("a, button").forEach((item) => {
+                item.addEventListener("click", () => {
+                    if (!mobileMenu.classList.contains("hidden")) {
+                        mobileMenu.classList.add("hidden");
+                        mobileMenuButton.setAttribute("aria-expanded", "false");
+                    }
+                });
+            });
+        }
+    </script>
 
 </body></html>
