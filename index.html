@@ -13,8 +13,8 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#9ca3af",
-                        secondary: "#6b7280",
+                        primary: "#c5c9cf",
+                        secondary: "#8c929c",
                         "background-light": "#f8f8f8",
                         "background-dark": "#0A0A0A",
                     },
@@ -31,12 +31,30 @@
     </script>
 <style>
         .metallic-text {
-            background: linear-gradient(135deg, #d4d4d8 0%, #9ca3af 50%, #6b7280 100%);
+            background: linear-gradient(135deg, #f3f4f6 0%, #c5c9cf 50%, #8c929c 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .metallic-bg {
-            background: linear-gradient(135deg, #A1A1AA 0%, #F4F4F5 50%, #A1A1AA 100%);
+            background: linear-gradient(135deg, #d7dbe0 0%, #f5f6f8 50%, #b7bcc4 100%);
+        }
+        .logo-emblem {
+            position: relative;
+            padding: 0.35rem;
+            border-radius: 999px;
+            background: linear-gradient(135deg, rgba(197, 201, 207, 0.35), rgba(140, 146, 156, 0.15));
+            box-shadow: 0 12px 30px rgba(17, 24, 39, 0.12);
+        }
+        .logo-emblem::after {
+            content: "";
+            position: absolute;
+            inset: 3px;
+            border-radius: 999px;
+            border: 1px solid rgba(203, 213, 225, 0.6);
+            pointer-events: none;
+        }
+        .logo-glow {
+            background: radial-gradient(circle at top, rgba(255, 255, 255, 0.8), transparent 60%);
         }
         .glass-nav {
             backdrop-filter: blur(10px);
@@ -49,22 +67,27 @@
         .font-bold,
         .font-extrabold,
         .font-black {
-            color: #9ca3af;
+            color: #c5c9cf;
         }
         .dark .font-semibold,
         .dark .font-bold,
         .dark .font-extrabold,
         .dark .font-black {
-            color: #d1d5db;
+            color: #e5e7eb;
         }
     </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300">
 <header class="fixed w-full z-50 bg-white/95 dark:bg-black/80 border-b border-slate-200 dark:border-slate-800 backdrop-blur">
 <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-<div class="flex items-center space-x-3">
-<img alt="EMF Logo" class="h-10 w-auto" src="logo.jpeg"/>
-<div class="text-2xl font-display font-extrabold tracking-tighter metallic-text">NAKLİYAT</div>
+<div class="flex items-center space-x-4">
+<div class="relative logo-emblem logo-glow">
+<img alt="EMF Logo" class="h-10 w-10 rounded-full bg-white p-1 shadow-inner" src="logo.jpeg"/>
+</div>
+<div>
+<div class="text-xs uppercase tracking-[0.4em] text-slate-500">EMF Logistics</div>
+<div class="text-2xl font-display font-extrabold tracking-tight metallic-text">NAKLİYAT</div>
+</div>
 </div>
 <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
 <a class="hover:text-primary transition-colors" href="#home">Ana Sayfa</a>
@@ -209,7 +232,7 @@ Deneyimli ekibimiz, güvenli taşıma anlayışımız ve zamanında teslimat gar
 </div>
 <div class="relative">
 <div class="absolute -top-6 -right-6 bg-primary/40 w-32 h-32"></div>
-<img alt="EMF Nakliyat Filosu" class="relative z-10 rounded-2xl shadow-2xl" src="https://images.unsplash.com/photo-1501706362039-c6b2a4b9a33b?auto=format&fit=crop&w=1000&q=80"/>
+<img alt="EMF Nakliyat Filosu" class="relative z-10 rounded-2xl shadow-2xl" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=80"/>
 </div>
 </div>
 </div>
@@ -355,9 +378,14 @@ Deneyimli ekibimiz, güvenli taşıma anlayışımız ve zamanında teslimat gar
 <div class="container mx-auto px-6">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 <div class="space-y-6">
-<div class="flex items-center space-x-3">
-<img alt="EMF Logo" class="h-10 w-auto" src="logo.jpeg"/>
+<div class="flex items-center space-x-4">
+<div class="relative logo-emblem logo-glow">
+<img alt="EMF Logo" class="h-10 w-10 rounded-full bg-white p-1 shadow-inner" src="logo.jpeg"/>
+</div>
+<div>
+<div class="text-xs uppercase tracking-[0.4em] text-zinc-400">EMF Logistics</div>
 <div class="text-2xl font-display font-black metallic-text">NAKLİYAT</div>
+</div>
 </div>
 <p class="text-zinc-400 text-sm leading-relaxed">
                         7/24 Şehir içi ve şehirler arası hızlı ve güvenilir taşımacılık hizmetleri. Profesyonel ekibimizle her zaman yanınızdayız.
