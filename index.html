@@ -13,9 +13,9 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#f97316",
-                        secondary: "#1d4ed8",
-                        "background-light": "#f8f5f2",
+                        primary: "#9ca3af",
+                        secondary: "#6b7280",
+                        "background-light": "#f8f8f8",
                         "background-dark": "#0A0A0A",
                     },
                     fontFamily: {
@@ -31,7 +31,7 @@
     </script>
 <style>
         .metallic-text {
-            background: linear-gradient(135deg, #f97316 0%, #fb923c 50%, #1d4ed8 100%);
+            background: linear-gradient(135deg, #d4d4d8 0%, #9ca3af 50%, #6b7280 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -45,13 +45,26 @@
         .dark .glass-nav {
             background-color: rgba(10, 10, 10, 0.8);
         }
+        .font-semibold,
+        .font-bold,
+        .font-extrabold,
+        .font-black {
+            color: #9ca3af;
+        }
+        .dark .font-semibold,
+        .dark .font-bold,
+        .dark .font-extrabold,
+        .dark .font-black {
+            color: #d1d5db;
+        }
     </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300">
 <header class="fixed w-full z-50 bg-white/95 dark:bg-black/80 border-b border-slate-200 dark:border-slate-800 backdrop-blur">
 <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-<div class="flex items-center space-x-2">
-<div class="text-2xl font-display font-extrabold tracking-tighter metallic-text">EMF NAKLİYAT</div>
+<div class="flex items-center space-x-3">
+<img alt="EMF Logo" class="h-10 w-auto" src="logo.jpeg"/>
+<div class="text-2xl font-display font-extrabold tracking-tighter metallic-text">NAKLİYAT</div>
 </div>
 <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
 <a class="hover:text-primary transition-colors" href="#home">Ana Sayfa</a>
@@ -62,7 +75,7 @@
 <span class="material-symbols-outlined text-primary">call</span>
 <span>+90 530 287 18 50</span>
 </a>
-<a class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-orange-500 transition-all shadow-lg shadow-orange-500/30" href="#quote">Fiyat Teklifi Al</a>
+<a class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-slate-500 transition-all shadow-lg shadow-slate-500/30" href="#quote">Fiyat Teklifi Al</a>
 <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" onclick="document.documentElement.classList.toggle('dark')">
 <span class="material-symbols-outlined align-middle">contrast</span>
 </button>
@@ -95,13 +108,13 @@
 <div>
 <span class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.3em] text-primary">Profesyonel Taşımacılık</span>
 <h1 class="text-5xl md:text-6xl font-display font-extrabold text-secondary mt-6 leading-tight">
-Doğru Zamanda<br/>Doğru Yerde
+7/24 hızlı, profesyonel ve<br/>güvenilir taşımacılık
 </h1>
 <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 mt-6 max-w-xl">
 İstanbul içi ağırlıklı çalışıyoruz; tüm illere sevkiyat sağlıyoruz. Güvenilir ve hızlı taşımacılık için bize ulaşın.
 </p>
 <div class="mt-8 flex flex-col sm:flex-row gap-4">
-<a class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-center hover:bg-orange-500 transition-colors shadow-xl shadow-orange-500/30" href="#quote">Fiyat Teklifi Al</a>
+<a class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-center hover:bg-slate-500 transition-colors shadow-xl shadow-slate-500/30" href="#quote">Fiyat Teklifi Al</a>
 <a class="flex items-center justify-center gap-2 border-2 border-slate-200 dark:border-slate-700 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="tel:+905302871850">
 <span class="material-symbols-outlined text-primary">call</span>
 <span>0530 287 18 50</span>
@@ -111,7 +124,7 @@ Doğru Zamanda<br/>Doğru Yerde
 <input class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" placeholder="Hizmet Türü" type="text"/>
 <input class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" placeholder="Adınız ve Soyadınız" type="text"/>
 <input class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" placeholder="Telefon Numaranız" type="tel"/>
-<button class="bg-primary text-white px-6 py-3 rounded-xl font-semibold hover:bg-orange-500 transition-colors" type="submit">Aranma Talep Et</button>
+<button class="bg-primary text-white px-6 py-3 rounded-xl font-semibold hover:bg-slate-500 transition-colors" type="submit">Aranma Talep Et</button>
 </form>
 </div>
 <div class="relative">
@@ -140,11 +153,11 @@ Doğru Zamanda<br/>Doğru Yerde
 <span class="w-2 h-2 rounded-full bg-slate-300"></span>
 <span class="w-2 h-2 rounded-full bg-slate-300"></span>
 </div>
-<div class="absolute inset-0 bg-gradient-to-tr from-white via-transparent to-orange-100 dark:from-slate-900/70 dark:to-orange-900/20 rounded-[32px]"></div>
+<div class="absolute inset-0 bg-gradient-to-tr from-white via-transparent to-zinc-200 dark:from-slate-900/70 dark:to-slate-800/30 rounded-[32px]"></div>
 <img alt="Modern Truck" class="relative w-full max-w-lg mx-auto drop-shadow-2xl rounded-3xl" src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80"/>
 </div>
 </div>
-<div class="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+<div class="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-8 text-center">
 <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl py-6 shadow-lg">
 <div class="text-4xl font-bold text-secondary" data-count="7">0</div>
 <p class="mt-2 text-sm uppercase tracking-widest text-primary">Bölgede</p>
@@ -153,14 +166,11 @@ Doğru Zamanda<br/>Doğru Yerde
 <div class="text-4xl font-bold text-secondary" data-count="81">0</div>
 <p class="mt-2 text-sm uppercase tracking-widest text-primary">İlde</p>
 </div>
-<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl py-6 shadow-lg">
-<div class="text-4xl font-bold text-secondary" data-count="3033">0</div>
-<p class="mt-2 text-sm uppercase tracking-widest text-primary">Başarılı Proje</p>
 </div>
-</div>
+<p class="mt-6 text-center text-slate-600 dark:text-slate-400 font-semibold">Binlerce başarılı teslimat.</p>
 </div>
 </section>
-<section class="py-24 bg-[#f4f1ed] dark:bg-[#0c0c0c]" id="services">
+<section class="py-24 bg-white dark:bg-[#0c0c0c]" id="services">
 <div class="container mx-auto px-6">
 <div class="grid lg:grid-cols-2 gap-16 items-center">
 <div>
@@ -169,6 +179,12 @@ Doğru Zamanda<br/>Doğru Yerde
 <p class="text-slate-600 dark:text-slate-400 mt-6">
 Özellikle İstanbul içi başta olmak üzere tüm Türkiye’de 81 il ve ilçelerde profesyonel ve uzman kadromuz ile hizmet veriyoruz.
 </p>
+<div class="mt-6 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-slate-50 dark:bg-slate-900">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Neden bizi tercih etmelisiniz?</h3>
+<p class="text-slate-600 dark:text-slate-400">
+Deneyimli ekibimiz, güvenli taşıma anlayışımız ve zamanında teslimat garantimizle EMF Nakliyat, sadece yükünüzü değil, yükünüzün sorumluluğunu da taşır.
+</p>
+</div>
 <div class="grid sm:grid-cols-2 gap-8 mt-8">
 <div>
 <h3 class="font-bold text-slate-900 dark:text-white mb-4">Hizmetlerimiz:</h3>
@@ -189,11 +205,11 @@ Doğru Zamanda<br/>Doğru Yerde
 </ul>
 </div>
 </div>
-<a class="inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-lg font-semibold mt-10 hover:bg-orange-500 transition-colors" href="#quote">Detaylı Bilgi Al</a>
+<a class="inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-lg font-semibold mt-10 hover:bg-slate-500 transition-colors" href="#quote">Detaylı Bilgi Al</a>
 </div>
 <div class="relative">
-<div class="absolute -top-6 -right-6 bg-primary w-32 h-32"></div>
-<img alt="Team" class="relative z-10 rounded-2xl shadow-2xl" src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1000&q=80"/>
+<div class="absolute -top-6 -right-6 bg-primary/40 w-32 h-32"></div>
+<img alt="EMF Nakliyat Filosu" class="relative z-10 rounded-2xl shadow-2xl" src="https://images.unsplash.com/photo-1501706362039-c6b2a4b9a33b?auto=format&fit=crop&w=1000&q=80"/>
 </div>
 </div>
 </div>
@@ -201,27 +217,27 @@ Doğru Zamanda<br/>Doğru Yerde
 <section class="py-24 bg-white dark:bg-background-dark" id="process">
 <div class="container mx-auto px-6 text-center">
 <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Çalışan Verimliliği</p>
-<h2 class="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mt-4">Bu Şekilde Çalışıyoruz</h2>
+<h2 class="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mt-4">Taşıma Sürecimiz</h2>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
 <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 text-left">
 <span class="text-3xl font-bold text-primary">01.</span>
-<h3 class="mt-4 font-bold text-slate-900 dark:text-white">Fiyat Teklifi</h3>
-<p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Arayarak fiyat teklifinizi netleştiriyoruz.</p>
+<h3 class="mt-4 font-bold text-slate-900 dark:text-white">İhtiyaç Analizi</h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Yük türünü, teslim adreslerini ve özel talepleri netleştiriyoruz.</p>
 </div>
 <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 text-left">
 <span class="text-3xl font-bold text-primary">02.</span>
-<h3 class="mt-4 font-bold text-slate-900 dark:text-white">Sözleşme</h3>
-<p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Karşılıklı mutabakat ile süreci planlıyoruz.</p>
+<h3 class="mt-4 font-bold text-slate-900 dark:text-white">Planlama</h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Araç, rota ve zamanlamayı birlikte planlıyoruz.</p>
 </div>
 <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 text-left">
 <span class="text-3xl font-bold text-primary">03.</span>
-<h3 class="mt-4 font-bold text-slate-900 dark:text-white">Başlama</h3>
-<p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Profesyonel kadromuz ile operasyonu başlatıyoruz.</p>
+<h3 class="mt-4 font-bold text-slate-900 dark:text-white">Güvenli Yükleme</h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Ekipmanlarımızla yüklerinizi güvenle araca alıyoruz.</p>
 </div>
 <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 text-left">
 <span class="text-3xl font-bold text-primary">04.</span>
-<h3 class="mt-4 font-bold text-slate-900 dark:text-white">Mutlu Son</h3>
-<p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Doğru zamanda, doğru yerde teslimat sağlıyoruz.</p>
+<h3 class="mt-4 font-bold text-slate-900 dark:text-white">Zamanında Teslim</h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Yükünüzü söz verdiğimiz zamanda sorunsuz teslim ediyoruz.</p>
 </div>
 </div>
 </div>
@@ -231,7 +247,7 @@ Doğru Zamanda<br/>Doğru Yerde
 <div class="flex flex-col lg:flex-row gap-16 items-center">
 <div class="lg:w-1/2">
 <h2 class="text-sm font-bold text-primary tracking-[0.2em] uppercase mb-4">Hızlı Teklif</h2>
-<h3 class="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-8 leading-tight">Taşınma Planınızı Birlikte Yapalım</h3>
+<h3 class="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-8 leading-tight">Taşıma Planınız İçin Birlikte Yapalım</h3>
 <p class="text-lg text-slate-600 dark:text-slate-400 mb-10">
                         Formu doldurarak fiyat teklifi alabilirsiniz. Ekibimiz en kısa sürede sizinle iletişime geçecektir.
                     </p>
@@ -292,7 +308,7 @@ Doğru Zamanda<br/>Doğru Yerde
 <label class="block text-sm font-semibold mb-2 text-slate-700 dark:text-slate-300">Notlarınız</label>
 <textarea class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" placeholder="Örn: Parsiyel yük, teslim günü ve özel talepler..." rows="4"></textarea>
 </div>
-<button class="w-full bg-primary text-white font-bold py-4 rounded-xl hover:bg-zinc-800 transition-colors shadow-lg" type="submit">TEKLİF İSTE</button>
+<button class="w-full bg-primary text-white font-bold py-4 rounded-xl hover:bg-slate-600 transition-colors shadow-lg" type="submit">TEKLİF İSTE</button>
 </form>
 </div>
 </div>
@@ -311,7 +327,7 @@ Doğru Zamanda<br/>Doğru Yerde
                         <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Evet, EMF Nakliyat olarak taşıdığımız tüm eşyalar sigorta kapsamında güvence altına alınmaktadır. Herhangi bir kaza veya hasar durumunda zararınız tamamen karşılanır.
+                        Sizin isteğiniz üzerine taşıdığımız yüklerimize sigorta yaptırıyoruz.
                     </p>
 </details>
 <details class="group bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
@@ -325,20 +341,11 @@ Doğru Zamanda<br/>Doğru Yerde
 </details>
 <details class="group bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
 <summary class="flex justify-between items-center font-bold text-lg cursor-pointer list-none text-slate-900 dark:text-white">
-                        Asansörlü taşıma hizmetiniz var mı?
+                        Parsiyel taşımacılık hizmetiniz var mı?
                         <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Evet, yüksek katlı binalarda eşyalarınızın zarar görmesini önlemek ve süreci hızlandırmak için son teknoloji dış cephe asansörlerimizi kullanıyoruz.
-                    </p>
-</details>
-<details class="group bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
-<summary class="flex justify-between items-center font-bold text-lg cursor-pointer list-none text-slate-900 dark:text-white">
-                        Paketleme hizmeti veriyor musunuz?
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Mobilyalarınızın demontajı, beyaz eşyalarınızın ambalajlanması ve mutfak gereçlerinizin özel kutulanması dahil tam kapsamlı paketleme hizmeti sunmaktayız.
+                        Evet, parsiyel taşımacılık hizmetimiz mevcuttur. Yükünüzü uygun araç ve planlama ile güvenle taşıyoruz.
                     </p>
 </details>
 </div>
@@ -348,7 +355,10 @@ Doğru Zamanda<br/>Doğru Yerde
 <div class="container mx-auto px-6">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 <div class="space-y-6">
-<div class="text-3xl font-display font-black metallic-text">EMF NAKLİYAT</div>
+<div class="flex items-center space-x-3">
+<img alt="EMF Logo" class="h-10 w-auto" src="logo.jpeg"/>
+<div class="text-2xl font-display font-black metallic-text">NAKLİYAT</div>
+</div>
 <p class="text-zinc-400 text-sm leading-relaxed">
                         7/24 Şehir içi ve şehirler arası hızlı ve güvenilir taşımacılık hizmetleri. Profesyonel ekibimizle her zaman yanınızdayız.
                     </p>
