@@ -149,10 +149,11 @@
 <span>0530 287 18 50</span>
 </a>
 </div>
-<form class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-2xl shadow-xl">
-<input class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" placeholder="Hizmet Türü" type="text"/>
-<input class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" placeholder="Adınız ve Soyadınız" type="text"/>
-<input class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" placeholder="Telefon Numaranız" type="tel"/>
+<form action="https://formspree.io/f/xykwgapk" class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-2xl shadow-xl" method="POST">
+<input class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" name="service" placeholder="Hizmet Türü" type="text"/>
+<input class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" name="name" placeholder="Adınız ve Soyadınız" type="text"/>
+<input class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" name="phone" placeholder="Telefon Numaranız" type="tel"/>
+<input name="_gotcha" style="display:none" type="text"/>
 <button class="bg-primary text-white px-6 py-3 rounded-xl font-semibold hover:bg-slate-500 transition-colors" type="submit">Aranma Talep Et</button>
 </form>
 </div>
