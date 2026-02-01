@@ -311,26 +311,26 @@ Deneyimli ekibimiz, güvenli taşıma anlayışımız ve zamanında teslimat gar
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div>
 <label class="block text-sm font-semibold mb-2 text-slate-900 dark:text-slate-300">Ad Soyad</label>
-<input class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" placeholder="John Doe" type="text"/>
+<input class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" name="full_name" placeholder="John Doe" type="text"/>
 </div>
 <div>
 <label class="block text-sm font-semibold mb-2 text-slate-900 dark:text-slate-300">Telefon</label>
-<input class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" placeholder="05XX XXX XX XX" type="tel"/>
+<input class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" name="phone" placeholder="05XX XXX XX XX" type="tel"/>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div>
 <label class="block text-sm font-semibold mb-2 text-slate-900 dark:text-slate-300">Nereden</label>
-<input class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" placeholder="İl / İlçe" type="text"/>
+<input class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" name="origin" placeholder="İl / İlçe" type="text"/>
 </div>
 <div>
 <label class="block text-sm font-semibold mb-2 text-slate-900 dark:text-slate-300">Nereye</label>
-<input class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" placeholder="İl / İlçe" type="text"/>
+<input class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" name="destination" placeholder="İl / İlçe" type="text"/>
 </div>
 </div>
 <div class="mb-6">
 <label class="block text-sm font-semibold mb-2 text-slate-900 dark:text-slate-300">Hizmet Türü</label>
-<select class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white">
+<select class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" name="service_type">
 <option>Nakliye</option>
 <option>Lojistik</option>
 <option>Dağıtım</option>
@@ -340,7 +340,7 @@ Deneyimli ekibimiz, güvenli taşıma anlayışımız ve zamanında teslimat gar
 </div>
 <div class="mb-8">
 <label class="block text-sm font-semibold mb-2 text-slate-900 dark:text-slate-300">Notlarınız</label>
-<textarea class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" placeholder="Örn: Parsiyel yük, teslim günü ve özel talepler..." rows="4"></textarea>
+<textarea class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" name="notes" placeholder="Örn: Parsiyel yük, teslim günü ve özel talepler..." rows="4"></textarea>
 </div>
 <button class="w-full bg-primary text-white font-bold py-4 rounded-xl hover:bg-slate-600 transition-colors shadow-lg" type="submit">TEKLİF İSTE</button>
 </form>
