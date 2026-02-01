@@ -153,12 +153,13 @@
 <span>0530 287 18 50</span>
 </a>
 </div>
-        <form action="https://formspree.io/f/mykpznda" class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-2xl shadow-xl" method="POST">
+        <form action="https://formspree.io/f/mykpznda" class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-2xl shadow-xl" data-formspree method="POST">
 <input class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" name="service" placeholder="Hizmet Türü" type="text"/>
 <input class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" name="name" placeholder="Adınız ve Soyadınız" type="text"/>
 <input class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" name="phone" placeholder="Telefon Numaranız" type="tel"/>
 <input name="_gotcha" style="display:none" type="text"/>
 <button class="bg-primary text-white px-6 py-3 rounded-xl font-semibold hover:bg-slate-500 transition-colors" type="submit">Aranma Talep Et</button>
+<p aria-live="polite" class="sm:col-span-2 text-sm text-slate-600 dark:text-slate-300" data-form-status></p>
 </form>
 </div>
 <div class="relative">
@@ -307,7 +308,7 @@ Deneyimli ekibimiz, güvenli taşıma anlayışımız ve zamanında teslimat gar
 </div>
 </div>
 <div class="lg:w-1/2 w-full">
-<form action="https://formspree.io/f/xykwgapk" class="bg-slate-50 dark:bg-slate-900 p-10 rounded-3xl border border-slate-100 dark:border-slate-800 shadow-xl" method="POST">
+<form action="https://formspree.io/f/xykwgapk" class="bg-slate-50 dark:bg-slate-900 p-10 rounded-3xl border border-slate-100 dark:border-slate-800 shadow-xl" data-formspree method="POST">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div>
 <label class="block text-sm font-semibold mb-2 text-slate-900 dark:text-slate-300">Ad Soyad</label>
@@ -343,6 +344,7 @@ Deneyimli ekibimiz, güvenli taşıma anlayışımız ve zamanında teslimat gar
 <textarea class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white" name="notes" placeholder="Örn: Parsiyel yük, teslim günü ve özel talepler..." rows="4"></textarea>
 </div>
 <button class="w-full bg-primary text-white font-bold py-4 rounded-xl hover:bg-slate-600 transition-colors shadow-lg" type="submit">TEKLİF İSTE</button>
+<p aria-live="polite" class="text-sm mt-4 text-slate-600 dark:text-slate-300" data-form-status></p>
 </form>
 </div>
 </div>
@@ -511,7 +513,44 @@ Deneyimli ekibimiz, güvenli taşıma anlayışımız ve zamanında teslimat gar
             });
         }
 
+        const setupFormspree = () => {
+            const forms = document.querySelectorAll("form[data-formspree]");
+            forms.forEach((form) => {
+                const status = form.querySelector("[data-form-status]");
+                form.addEventListener("submit", async (event) => {
+                    event.preventDefault();
+                    if (status) {
+                        status.textContent = "Gönderiliyor...";
+                    }
+                    try {
+                        const response = await fetch(form.action, {
+                            method: "POST",
+                            body: new FormData(form),
+                            headers: {
+                                Accept: "application/json",
+                            },
+                        });
+                        if (response.ok) {
+                            if (status) {
+                                status.textContent = "Teşekkürler! Talebiniz alındı.";
+                            }
+                            form.reset();
+                        } else {
+                            if (status) {
+                                status.textContent = "Gönderim sırasında bir hata oluştu. Lütfen tekrar deneyin.";
+                            }
+                        }
+                    } catch (error) {
+                        if (status) {
+                            status.textContent = "Bağlantı hatası. Lütfen daha sonra tekrar deneyin.";
+                        }
+                    }
+                });
+            });
+        };
+
         animateCounters();
+        setupFormspree();
     </script>
 
 </body></html>
